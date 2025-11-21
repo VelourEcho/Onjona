@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Your three smart links
+        const links = [
+            "https://www.effectivegatecpm.com/tkw0412f?key=c65f3961bc1f9764e1874c0408bb1cb0",
+            "https://www.effectivegatecpm.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391",
+            "https://www.effectivegatecpm.com/mx9cay1w7z?key=f5398fbaeb8ab5878f35d070a6a483f2"
+        ];
+
+        // Pick a random link
+        const randomLink = links[Math.floor(Math.random() * links.length)];
+
+        // Redirect to the chosen link
+        window.location.href = randomLink;
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, <a id="fallback" href="#">click here</a>.</p>
+    <script>
+        // Update fallback link just in case
+        document.getElementById('fallback').href = randomLink;
+    </script>
+</body>
+</html>
