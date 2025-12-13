@@ -1,66 +1,398 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>রাত্রির রোমাঞ্চ: প্রাপ্তবয়স্কদের জন্য বিশেষ অভিজ্ঞতা</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒অঞ্জনার প্রাইভেট ভিডিও আর্কাইভ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Open Graph (Facebook / Messenger) -->
-  <meta property="og:title" content="রাত্রির রোমাঞ্চ: প্রাপ্তবয়স্কদের জন্য বিশেষ অভিজ্ঞতা" />
-  <meta property="og:description" content="আপনি যদি প্রাপ্তবয়স্ক হন, এক ক্লিকে সীমাহীন রোমাঞ্চ আবিষ্কার করুন — নিরাপদ, দ্রুত, প্রিমিয়াম কনটেন্ট।" />
-  <meta property="og:image" content="https://i.ibb.co.com/4Bb7MSk/image2.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="bn_BD" />
-  <meta property="og:site_name" content="Onjona" />
-  <meta property="og:url" content="https://velourecho.github.io/Onjona/" />
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="রাত্রির রোমাঞ্চ: প্রাপ্তবয়স্কদের জন্য বিশেষ অভিজ্ঞতা" />
-  <meta name="twitter:description" content="আপনি যদি প্রাপ্তবয়স্ক হন, এক ক্লিকে সীমাহীন রোমাঞ্চ আবিষ্কার করুন — নিরাপদ, দ্রুত, প্রিমিয়াম কনটেন্ট।" />
-  <meta name="twitter:image" content="https://i.ibb.co.com/4Bb7MSk/image2.jpg" />
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
 
-  <!-- Legacy image src hint -->
-  <link rel="image_src" href="https://i.ibb.co.com/4Bb7MSk/image2.jpg" />
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-bottom: 3px solid #e94560;
+            margin-bottom: 40px;
+        }
 
-  <!-- Fallback meta-refresh for non-JS browsers (short delay so scrapers pick up OG tags) -->
-  <!-- NOTE: delay set to 5s to maximize chance scrapers will read OG tags before redirecting -->
-  <noscript>
-    <meta http-equiv="refresh" content="5;url=https://www.effectivegatecpm.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391" />
-  </noscript>
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #e94560;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-  <style>
-    /* Lightweight, mobile-first styles */
-    :root{color-scheme: light dark}
-    html,body{height:100%;margin:0;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Bengali", "Noto Sans", Arial, sans-serif;background:#0b0b0b;color:#fff}
-    .wrap{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;box-sizing:border-box;text-align:center}
-    .card{max-width:720px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
-    h1{margin:0 0 12px;font-size:1.6rem;line-height:1.2}
-    p{margin:0 0 18px;color:#d6d6d6}
-    .cta{display:inline-block;background:#ff3366;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600}
-    .muted{font-size:0.9rem;color:#a9a9a9;margin-top:12px}
-    a.small{color:#9be3ff;text-decoration:underline}
-    @media (min-width:600px){ h1{font-size:1.9rem} }
-  </style>
+        .subtitle {
+            font-size: 1.2rem;
+            color: #f1c40f;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        /* Video Card */
+        .video-card {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(233, 69, 96, 0.4);
+        }
+
+        .video-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        /* EDIT: Replace with your thumbnail images */
+        .video-thumbnail {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #434343 0%, #000000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Play Icon Overlay */
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80px;
+            height: 80px;
+            background: rgba(233, 69, 96, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover .play-icon {
+            background: rgba(233, 69, 96, 1);
+            transform: translate(-50%, -50%) scale(1.15);
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 25px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+
+        /* Video Title */
+        .video-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            z-index: 2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+            border-top: 3px solid #e94560;
+        }
+
+        .disclaimer {
+            font-size: 1.1rem;
+            color: #f39c12;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .age-badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .play-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .play-icon::after {
+                border-left-width: 20px;
+                border-top-width: 12px;
+                border-bottom-width: 12px;
+            }
+
+            .video-title {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            header {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+        }
+        .more-button-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.more-button {
+    display: inline-block;
+    background-color: #e94560; /* red/pink accent */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.more-button:hover {
+    background-color: #f0547f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+}
+    </style>
 </head>
-<body>
-  <main class="wrap" role="main" aria-labelledby="title">
-    <div class="card" id="content">
-      <h1 id="title">রাত্রির রোমাঞ্চ: প্রাপ্তবয়স্কদের জন্য বিশেষ অভিজ্ঞতা</h1>
-      <p>আপনি যদি প্রাপ্তবয়স্ক হন, এক ক্লিকে সীমাহীন রোমাঞ্চ আবিষ্কার করুন — নিরাপদ, দ্রুত এবং মোবাইল-অনুকূল। এক ক্ষণিকের জন্য অপেক্ষা করুন, আমরা আপনাকে নিয়ে যাচ্ছে…</p>
+<body onclick="redirectToLink()">
+    <!-- Header Section -->
+    <header>
+        <!-- EDIT: Modify header text here -->
+        <h1>🔒অঞ্জনার প্রাইভেট ভিডিও আর্কাইভ</h1>
+        <p class="subtitle">শুধুমাত্র ১৮+ দর্শকদের জন্য </p>
+    </header>
 
-      <!-- Clickable fallback for users who prefer to proceed manually -->
-      <a class="cta" id="manualLink" href="https://www.effectivegatecpm.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391" rel="noopener noreferrer" target="_blank">এখানে ক্লিক করে এগিয়ে যান</a>
+   <!-- Video Gallery Section -->
+<div class="container">
+    <div class="gallery">
+        <!-- Video Card 1 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail1.jpg" alt="Video 1" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #১</div>
+        </div>
 
-      <p class="muted">এই লিংকটি শুধুমাত্র প্রাপ্তবয়স্কদের জন্য। ক্লিক করে আপনি নিশ্চিত করছেন যে আপনি প্রাপ্তবয়স্ক।</p>
-      <p class="muted">যদি রিডাইরেক্ট না হয়, উপরকার বোতামে ক্লিক করুন।</p>
+        <!-- Video Card 2 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail2.jpg" alt="Video 2" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #২</div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail3.jpg" alt="Video 3" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৩</div>
+        </div>
+
+        <!-- Video Card 4 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail4.jpg" alt="Video 4" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৪</div>
+        </div>
+
+        <!-- Video Card 5 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail5.jpg" alt="Video 5" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৫</div>
+        </div>
+
+        <!-- Video Card 6 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail6.jpg" alt="Video 6" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৬</div>
+        </div>
+
+        <!-- Video Card 7 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail7.jpg" alt="Video 7" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৭</div>
+        </div>
+
+        <!-- Video Card 8 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail8.jpg" alt="Video 8" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৮</div>
+        </div>
+
+        <!-- Video Card 9 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail9.jpg" alt="Video 9" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #৯</div>
+        </div>
+
+        <!-- Video Card 10 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://atikulislamx.github.io/onjona/thumbnail10.jpg" alt="Video 10" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="play-icon"></div>
+            <div class="video-title">প্রাইভেট কালেকশন #১০</div>
+        </div>
     </div>
-  </main>
+</div>
+<!-- Video Gallery Section End -->
+</div>
+</div>
 
-  <script>
-    (function(){
-      'use strict';
-      var target = "https://www.effectivegatecpm.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391";
+<!-- More Button Section -->
+<div class="more-button-container">
+    <a href="https://petsrulefondness.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391" class="more-button">আরও দেখতে এখানে ক্লিক করুন</a>
+</div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <!-- EDIT: Modify disclaimer text here -->
+        <p class="disclaimer">⚠️ সতর্কতা: শুধুমাত্র প্রাপ্তবয়স্কদের জন্য</p>
+        <p class="footer-text">
+            এই সাইটে প্রবেশের জন্য আপনার বয়স অবশ্যই ১৮ বছর বা তার বেশি হতে হবে।<br>
+            আপনি যদি আপনার দেশের আইন অনুযায়ী প্রাপ্তবয়স্ক না হন, তাহলে অনুগ্রহ করে এই সাইট থেকে প্রস্থান করুন।
+        </p>
+        <div class="age-badge">18+</div>
+    </footer>
+
+    <script>
+        // EDIT: Change this URL to your desired redirect link
+        const REDIRECT_URL = 'https://petsrulefondness.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391';
+
+        function redirectToLink() {
+            // Redirect to external link when anywhere on page is clicked
+            window.location.href = REDIRECT_URL;
+        }
+    </script>
+</body>
+</html>      var target = "https://petsrulefondness.com/cwkbzs47m?key=f2ece563385d7f47d6ebf0896f553391";
 
       // Primary redirect: JS-based immediate redirect (small delay for UX)
       function redirectNow(){
